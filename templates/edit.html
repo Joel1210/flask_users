@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit User {{efriend['id']}}</h1>
+
+    <form action="/edituser" method="POST">
+        <p>First Name: <input type="text" name="efname" value= "{{ efriend['firstname'] }}"></p>
+        <p>Last Name: <input type="text" name="elname" value= "{{ efriend['lastname'] }}"></p>
+        <p>Email: <input type="text" name="eemail" value= "{{ efriend['email'] }}"></p>
+        <input type= "hidden" name="eid" value= "{{ efriend['id'] }}">
+        <input type="submit" value="Update">
+    </form>
+
+<a href="/users/{{efriend['id']}}">Show</a>
+
+
+</body>
+</html>
